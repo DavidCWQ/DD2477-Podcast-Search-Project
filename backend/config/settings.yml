@@ -1,0 +1,10 @@
+# settings.yml
+
+HOME_PAGE: "home.html"
+
+# Root path relative to module (Flask app)
+STATIC_FOLDER: "../../frontend/static/"
+TEMPLATE_FOLDER: "../../frontend/templates/"
+
+# Other parameters
+is_test: false

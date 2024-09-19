@@ -1,0 +1,34 @@
+{# templates/results.html #}
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Search Results | Podcast Search DD2477 </title>
+  <link rel="icon" href="../static/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../static/css/results.css">
+</head>
+
+<body>
+  <div class="search-results">
+    <div class="page-header">
+      <h1 class="page-title"> Search Results </h1>
+      <img class="home-icon" src="../static/img/home_icon.png" id="home-icon" alt="home">
+    </div>
+    <div class="page-details" id="page-details">
+      <div class="total-counts" id="total-counts"></div>
+      <div class="page-info" id="page-info" style="text-align: right;"></div>
+    </div>
+    <div class="result-details" id="result-details">
+      {{ results | tojson | safe }}
+    </div>
+    <div class="page-controls">
+      <img class="back-icon" src="../static/img/back_icon.png" id="back-icon" alt="back">
+      <img class="next-icon" src="../static/img/next_icon.png" id="next-icon" alt="next">
+    </div>
+  </div>
+  <script src="../static/js/results.js"></script>
+</body>
+
+</html>

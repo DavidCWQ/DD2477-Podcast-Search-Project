@@ -1,0 +1,14 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.background-image {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    z-index: -1; /* Place the image behind other content */
+    overflow-y: auto; /* Enable vertical scrolling */
+}

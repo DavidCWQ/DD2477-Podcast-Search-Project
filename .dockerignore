@@ -1,0 +1,7 @@
+es/data
+*.md
+*/*.md
+*/*/*.md
+__pycache__
+*/__pycache__
+*/*/__pycache__

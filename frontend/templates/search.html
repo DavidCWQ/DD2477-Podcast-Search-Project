@@ -1,0 +1,70 @@
+{# templates/search.html #}
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Search Page | Podcast Search DD2477 </title>
+  <link rel="icon" href="../static/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../static/css/search.css">
+  <link rel="stylesheet" href="../static/css/loadingSpinner.css">
+</head>
+
+<body>
+  <div id="spinnerContainer" class="spinner-container">
+    <div class="loading-spinner"></div>
+  </div>
+  <div id="pageContainer" class="page">
+    <div class="logo">
+      <a href="/">
+        <img class="searchIcon" src="../static/img/title.png" title="Podcast Search" alt="Meow">
+      </a>
+    </div>
+    <div class="searchBox">
+      <label for="searchInput"></label>
+      <input class="searchBar" placeholder='search podcasts here' type='text' id="searchInput">
+      <img class="searchButton" src="../static/img/search_icon.png" title="Search" alt="ES">
+    </div>
+    <div class="buttons">
+      <div class="clipBox">
+        <label for="clipInput"></label>
+        <input class="button" type="text" maxlength="4"
+               oninput="value=value.replace(/[^0-9]/g,'');"
+               placeholder='Clip length' id="clipInput">
+        <div class="units" style="text-align: right;"> sec </div>
+      </div>
+      <div class="clipBox">
+        <label for="sizeInput"></label>
+        <input class="button" type="text" maxlength="2" style="text-align: center;"
+               oninput="value=value.replace(/[^0-9]/g,'');"
+               placeholder='10&emsp;' id="sizeInput">
+        <div class="names" style="text-align: left;"> Top </div>
+        <div class="units" style="text-align: right;"> audio </div>
+      </div>
+      <label class="select" for="selector">
+      <select id="selector" required="required" title="Select search method">
+        <optgroup label="Lexical Search">
+          <option value="1" class="searchItem">Basic Search</option>
+          <option value="2" class="searchItem">Advanced Search</option>
+        </optgroup>
+        <optgroup label="Semantic Search">
+          <option value="3" class="searchItem">kNN Search</option>
+        </optgroup>
+      </select>
+      <svg>
+        <use xlink:href="#select-arrow-down"></use>
+      </svg>
+      </label>
+      <!-- SVG Sprites-->
+      <svg class="sprites">
+        <symbol id="select-arrow-down" viewBox="0 0 10 6">
+          <polyline points="1 1 5 5 9 1"></polyline>
+        </symbol>
+      </svg>
+    </div>
+  </div>
+  <script src="../static/js/search.js"></script>
+</body>
+
+</html>
